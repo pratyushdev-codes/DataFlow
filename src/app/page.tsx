@@ -1,10 +1,12 @@
 import Navbar from "@/components/global/Navbar";
 import Image from "next/image";
+import { LampComponent } from "@/components/global/lamp";
 import { clients, products } from "@/lib/constants";
 import { ContainerScroll } from "@/components/global/container-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { InfiniteMovingCards } from "@/components/global/infinte-moving-cards";
 import { HeroParallax } from "@/components/global/connect-parallax";
+import { Section } from "lucide-react";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -40,6 +42,9 @@ export default function Home() {
       <section>
          <HeroParallax products={products}></HeroParallax>
       </section>
+      <Section>
+        <LampComponent/>
+      </Section>
     </main>
   );
 }
